@@ -1,0 +1,25 @@
+Requisitos del sistema:
+1. Entidades del sistema:
+o Libro: Cada libro tiene un título, una fecha de publicación y un número ISBN
+único.
+o Autor: Cada autor tiene un nombre y una biografía.
+o Usuario: Los usuarios tienen un nombre y un correo electrónico.
+o Préstamo: Un usuario puede tomar prestado un libro, registrándose la fecha
+del préstamo y la fecha límite de devolución.
+
+2. Relaciones entre entidades:
+o Un Libro tiene un único Autor y este puede escribir varios libros
+
+o Un Usuario puede tomar prestados varios Libros y estos a lo largo del tiempo han sido prestados a varios usuarios (relación muchos a muchos), para ello, tras una relación entre estas dos, se va a crear la tabla de préstamo
+
+o Se debe registrar qué Libros ha tomado prestados un Usuario y cuándo
+(relación uno a muchos a través de la tabla de Préstamos).
+
+
+Esquema de las tablas:
+1. Libro: id, titulo, fecha_publicacion, isbn
+2. Autor: id, nombre, biografía
+3. Usuario: id, nombre, email
+4. Préstamo: id, libro_id, usuario_id, fecha_prestamo, fecha_limite_devolucion
+
+
